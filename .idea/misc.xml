@@ -33,10 +33,6 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectRootManager" version="2" />
-  <component name="SvnConfiguration" myUseAcceleration="nothing">
-    <configuration useDefault="false">C:\Program Files\TortoiseSVN\bin</configuration>
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="true" />
-  </component>
   <component name="masterDetails">
     <states>
       <state key="ScopeChooserConfigurable.UI">
