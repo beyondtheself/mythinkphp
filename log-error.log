@@ -1,0 +1,16 @@
+[Sun Jan 01 12:46:56 2017] [error] [client 127.0.0.1] client denied by server configuration: E:/MyWeb/mythinkphp/
+[Sun Jan 01 12:46:56 2017] [error] [client 127.0.0.1] client denied by server configuration: E:/MyWeb/mythinkphp/favicon.ico
+[Sun Jan 01 12:46:56 2017] [error] [client 127.0.0.1] client denied by server configuration: E:/MyWeb/mythinkphp/favicon.ico
+[Sun Jan 01 12:49:13 2017] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_VARIABLE in E:\\MyWeb\\mythinkphp\\Application\\Views\\Controller\\IndexController.class.php on line 33
+[Sun Jan 01 12:49:54 2017] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_VARIABLE in E:\\MyWeb\\mythinkphp\\Application\\Views\\Controller\\IndexController.class.php on line 33
+[Sun Jan 01 12:49:55 2017] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_VARIABLE in E:\\MyWeb\\mythinkphp\\Application\\Views\\Controller\\IndexController.class.php on line 33
+[Sun Jan 01 12:49:56 2017] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_VARIABLE in E:\\MyWeb\\mythinkphp\\Application\\Views\\Controller\\IndexController.class.php on line 33
+[Sun Jan 01 12:50:10 2017] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_VARIABLE in E:\\MyWeb\\mythinkphp\\Application\\Views\\Controller\\IndexController.class.php on line 33
+[Sun Jan 01 12:50:20 2017] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_VARIABLE in E:\\MyWeb\\mythinkphp\\Application\\Views\\Controller\\IndexController.class.php on line 33
+[Sun Jan 01 13:03:38 2017] [error] [client 127.0.0.1] PHP Fatal error:  Class 'Models\\Controller\\Models\\Model\\UserModel' not found in E:\\MyWeb\\mythinkphp\\Application\\Models\\Controller\\IndexController.class.php on line 6
+[Sun Jan 01 13:04:28 2017] [error] [client 127.0.0.1] PHP Fatal error:  Class 'Models\\Controller\\Models\\Model\\UserModel' not found in E:\\MyWeb\\mythinkphp\\Application\\Models\\Controller\\IndexController.class.php on line 6
+[Sun Jan 01 13:04:31 2017] [error] [client 127.0.0.1] PHP Fatal error:  Class 'Models\\Model\\UserModel' not found in E:\\MyWeb\\mythinkphp\\Application\\Models\\Controller\\IndexController.class.php on line 7
+[Sun Jan 01 13:06:00 2017] [error] [client 127.0.0.1] PHP Fatal error:  Class 'Models\\Model\\UserModel' not found in E:\\MyWeb\\mythinkphp\\Application\\Models\\Controller\\IndexController.class.php on line 7
+[Sun Jan 01 13:06:01 2017] [error] [client 127.0.0.1] PHP Fatal error:  Class 'Models\\Model\\UserModel' not found in E:\\MyWeb\\mythinkphp\\Application\\Models\\Controller\\IndexController.class.php on line 7
+[Sun Jan 01 13:06:02 2017] [error] [client 127.0.0.1] PHP Fatal error:  Class 'Models\\Model\\UserModel' not found in E:\\MyWeb\\mythinkphp\\Application\\Models\\Controller\\IndexController.class.php on line 7
+[Sun Jan 01 13:06:02 2017] [error] [client 127.0.0.1] PHP Fatal error:  Class 'Models\\Model\\UserModel' not found in E:\\MyWeb\\mythinkphp\\Application\\Models\\Controller\\IndexController.class.php on line 7
