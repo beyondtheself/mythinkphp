@@ -18,6 +18,7 @@ class IndexController extends Controller
 
         $userModel = D('User');
 
+
         $condition = array(
             'username'=>array('EQ','stone'),
             'status'=>1
