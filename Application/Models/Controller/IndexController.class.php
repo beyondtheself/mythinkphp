@@ -12,9 +12,27 @@ class IndexController extends Controller
 //        dump($user->getDbFields());
 //        $this->creteUser();
 //        $this->deleteUser(4);
-        $this->updateUserStatus(5);
+//        $this->updateUserStatus(5);
 //        $this->listUsers();
-        $this->showUser(5);
+//        $this->showUser(5);
+
+        $userModel = D('User');
+
+        $condition = array(
+            'username'=>array('EQ','stone'),
+            'status'=>1
+        );
+
+        $result = $userModel
+            ->where($condition)
+            ->order('create_time desc')
+//            ->limit(2)
+            ->page(6,5)
+            ->fetchSql(true)
+            ->select();
+        echo($userModel->getLastSql());
+        echo '<hr/>';
+        echo $result;
     }
 
 //    新增用户
