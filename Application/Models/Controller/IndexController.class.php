@@ -7,33 +7,35 @@ class IndexController extends Controller
 {
     public function index()
     {
-//        $user = D('User');
+        $user = D('User');
 ////        dump($user->select());
 //        dump($user->getDbFields());
-//        $this->creteUser();
+//        $this->creteUserAR();
+        $this->creteUser();
+
 //        $this->deleteUser(4);
-//        $this->updateUserStatus(5);
-//        $this->listUsers();
+//        $this->updateUserStatusAR(7);
+        $this->listUsers();
 //        $this->showUser(5);
 
-        $userModel = D('User');
+//        $userModel = D('User');
 
 
-        $condition = array(
-            'username'=>array('EQ','stone'),
-            'status'=>1
-        );
-
-        $result = $userModel
-            ->where($condition)
-            ->order('create_time desc')
-//            ->limit(2)
-            ->page(6,5)
-            ->fetchSql(true)
-            ->select();
-        echo($userModel->getLastSql());
-        echo '<hr/>';
-        echo $result;
+//        $condition = array(
+//            'username' => array('EQ', 'stone'),
+//            'status' => 1
+//        );
+//
+//        $result = $userModel
+//            ->where($condition)
+//            ->order('create_time desc')
+////            ->limit(2)
+//            ->page(6, 5)
+//            ->fetchSql(true)
+//            ->select();
+//        echo($userModel->getLastSql());
+//        echo '<hr/>';
+//        echo $result;
     }
 
 //    新增用户
@@ -46,7 +48,33 @@ class IndexController extends Controller
             'create_time' => time(),
             'status' => 1
         );
-        D('User')->add($userAttribute);
+        $userAttribute2 = array(
+            'zhanghao' => 'tom2',
+            'word' => md5('111'),
+            'youjian' => 'tom2@redpass.com',
+            'zhuceshijian' => time(),
+            'zhuangtai' => 0
+        );
+
+        $userModel=D('User');
+
+        $userModel->create($userAttribute2);
+        $userModel->add();
+
+//        D('User')->add($userAttribute);
+    }
+
+    private function creteUserAR()
+    {
+        $user = D('User');
+
+        $user->username = 'stone';
+        $user->password = md5('123');
+        $user->email = 'stone@redpass.com';
+        $user->create_time = time();
+        $user->status = 1;
+
+        $user->add();
     }
 
 //    读取全部用户
@@ -63,6 +91,15 @@ class IndexController extends Controller
             'status' => 0
         );
         D('User')->save($userUpdateAttribute);
+    }
+
+    private function updateUserStatusAR($userId)
+    {
+        $user = D('User');
+        $user->id = $userId;
+        $user->status = 0;
+
+        D('User')->save();
     }
 
 //    删除用户

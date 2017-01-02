@@ -8,6 +8,7 @@ return array(
     'DB_PWD'                =>  'redpass123',          // 密码
     'DB_PORT'               =>  '3306',        // 端口
     'DB_PREFIX'             =>  'stone_',    // 数据库表前缀
+    'READ_DATA_MAP'         => true,
 
 //    'DB_FIELDS_CACHE'       =>  true,
 

@@ -36,6 +36,15 @@ class UserModel extends Model
 //        )
 //    );
 
+    protected $_map = array(
+        'zhanghao' => 'username',
+        'word' => 'password',
+        'youjian' => 'email',
+        'zhuangtai' => 'status',
+        'zhuceshijian' => 'create_time',
+        'bianhao' => 'id',
+    );
+
 //  查询条件的三种定义方式
     public function sql_1()
     {
