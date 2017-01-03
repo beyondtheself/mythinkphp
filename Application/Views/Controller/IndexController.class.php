@@ -6,7 +6,7 @@ class IndexController extends Controller {
     	$username = 'stone';
     	$email = 'stone@redpass.com';
     	$age = 18;
-    	$birthday_year='2990';
+    	$birthday_year='2016';
 
     	$user = array(
     		'user' => $username,
@@ -18,7 +18,7 @@ class IndexController extends Controller {
     	$this->assign('birthday_year',$birthday_year);
 
     	//好友数据变量赋值
-    	$this->assign('friends',get_user_friends())
+    	$this->assign('friends',get_user_friends());
 
     	// $fetchContent = $this->fetch();
     	// $fetchContent = str_replace('stone', 'stone.php', $fetchContent);
@@ -32,4 +32,10 @@ class IndexController extends Controller {
 
         $this->display();
     }
+
+	public function friends(){
+		//好友数据变量赋值
+		$this->assign('friends',get_user_friends());
+		$this->display();
+	}
 }

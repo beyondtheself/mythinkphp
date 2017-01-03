@@ -11,5 +11,7 @@ return array(
 	'TMPL_PARSE_STRING'			=>array(
 			'__CDN__'=>'./Cdn',
 			'__AVATAR__'=>__ROOT__.'/Uploads/avatar'
-		)
+		),
+	'TAGLIB_PRE_LOAD'			=> 'Views\TagLib\Stone',
+//	'TAGLIB_BUILD_IN'			=> 'Views\TagLib\Stone',
 );

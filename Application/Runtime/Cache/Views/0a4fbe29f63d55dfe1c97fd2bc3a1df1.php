@@ -1,7 +1,8 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
-<html lang="">
-	<head>
-		<meta charset="utf-8">
+<?php if (!defined('THINK_PATH')) exit();?><!--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>STONE-thinkphp</title>
@@ -15,9 +16,9 @@
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
-	</head>
-	<body>
-		<nav class="navbar navbar-default" role="navigation">
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -55,7 +56,21 @@
 				</div><!-- /.navbar-collapse -->
 			</div>
 		</nav>
+<div class="container">
+    
+    <div class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+            &times;
+        </button>
+        <strong>SUCCESS</strong>重载header Block
+    </div>
 
+    <div class="col-md-2 list-group">
+        <a class="list-group-item" href="<?php echo U('index');?>">主页</a>
+        <a class="list-group-item" href="<?php echo U('friends');?>">好友列表</a>
+    </div>
+    <div class="col-md-10">
+        
 		<div class="container-fluid">
 
 		<div class="alert alert-info">
@@ -79,7 +94,7 @@
 					</tr>
 					<tr>
 						<td>计算年龄</td>
-						<td><?php echo (getAge($birthday_year)); ?></td>
+						<td><?php echo (get_age($birthday_year)); ?></td>
 					</tr>
 					<tr>
 						<td>手机号</td>
@@ -92,20 +107,31 @@
 				</tbody>
 			</table>
 		</div>
-		<!-- jQuery -->
+
+		<div class="panel panel-default">
+			<div class="panel panel-heading">
+				<h3 class="panel-title">Stone</h3>
+			</div>
+			<div class="list-group">
+				<?php $_FRIENDS_15780=get_user_friends(2); if(empty($_FRIENDS_15780)){echo $empty;} else { foreach ($_FRIENDS_15780 as $key => $stone_user) { ?><a href="#" class="list-group-item"><?php echo ($stone_user['username']); ?></a><?php } } ?>
+			</div>
+		</div>
+
+    </div>
+</div>
+<!-- jQuery -->
 		<script src="//code.jquery.com/jquery.js"></script>
 		<!-- Bootstrap JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
  		<script src="Hello World"></script>
 
- 		<script type="text/javascript" src="/thinkphp/Public/Js/bootstrap.js"></script>
+ 		<script type="text/javascript" src="/Public/Js/bootstrap.js"></script>
 
- 		<script type="text/javascript" src="/thinkphp/Public/js/jquery.js"></script>
+ 		<script type="text/javascript" src="/Public/js/jquery.js"></script>
 
- 		<link rel="stylesheet" type="text/css" href="/thinkphp/Public/css/bootstrap.css" />
+ 		<link rel="stylesheet" type="text/css" href="/Public/css/bootstrap.css" />
 
  		<script type="text/javascript" src="./Cdn/js/bootstrap.js"></script>
-		
-	</body>
+</body>
 </html>

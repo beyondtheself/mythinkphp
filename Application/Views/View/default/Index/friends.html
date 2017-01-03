@@ -1,0 +1,66 @@
+<!--<taglib name="Views\TagLib\Stone" />-->
+<!--<layout name="layout" />-->
+<extend name="Base/common"/>
+<block name="content">
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">好友列表</h3>
+    </div>
+    <ul class="list-group media-list">
+        <!-- volist循环 -->
+        <volist name="friends" id="friend" empty="你个穷碧没朋友">
+            <li class="list-group-item media">
+                <a class="pull-left" href="#">
+                    <!-- empty判断头像是否为空 -->
+                    <empty name="friend['avatar']">
+                        <img width="120" height="120" class="media-object"
+                             src="__AVATAR__/default.png" alt="{$friend['username']}">
+                        <else/>
+                        <img width="120" height="120" class="media-object"
+                             src="__AVATAR__/{$friend['avatar']}" alt="{$friend['username']}">
+                    </empty>
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">
+
+                        <!-- eq 判断年龄是否是30岁-->
+                        {$friend['username']}(今年{$friend.age}岁)
+                        <compare name="friend['age']" value="30" type="eq">
+                            <span class="label label-warning">您恰好30岁，真是猿粪啊！</span>
+                        </compare>
+                        <!-- if/else-->
+                        <if condition="$friend['age'] lt 18">
+                            <span class="pull-right">未成年，不显示</span>
+                            <else />
+                            <a href="#" class="pull-right btn btn-warning">满18岁，可操作</a>
+                        </if>
+                    </h4>
+                    <p>
+                        <!-- 比较标签-->
+                        <!-- lt比较年龄-->
+                        <lt name="friend['age']" value="18">未成年</lt>
+                        <!-- compare比较年龄-->
+                        <compare name="friend['age']" value="18" type="lt">
+									<span class="text-danger">
+										注意：compare标签也提示：{$friend['username']}未成年！
+									</span>
+                        </compare>
+                        <!-- egt方式比较年龄-->
+                        <egt name="friend['age']" value="35">中年人</egt>
+                        <!-- between 方式比较年龄-->
+                        <between name="friend['age']" value="18,34">青年</between>
+                    </p>
+                </div>
+                <div>
+                    标签：
+                    <!-- volist循环嵌套输出tags标签-->
+                    <volist name="friend['tags']" id="tag">
+                        <span class="label label-success">{$tag}</span>
+                    </volist>
+                </div>
+            </li>
+        </volist>
+    </ul>
+</div>
+
+</block>

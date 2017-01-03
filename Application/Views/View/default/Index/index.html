@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="">
-	<head>
-		<include file="public/head" />
-	</head>
-	<body>
-		<include file="public/navbar" home="主页"/>
 
+<!--<layout name="layout" />-->
+<extend name="Base/common"/>
+<block name="content">
 		<div class="container-fluid">
 
 		<div class="alert alert-info">
@@ -29,7 +25,7 @@
 					</tr>
 					<tr>
 						<td>计算年龄</td>
-						<td>{$birthday_year|getAge}</td>
+						<td>{$birthday_year|get_age}</td>
 					</tr>
 					<tr>
 						<td>手机号</td>
@@ -43,24 +39,23 @@
 			</table>
 		</div>
 
-		<!-- 好友列表 -->
 		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">好友列表</h3>
+			<div class="panel panel-heading">
+				<h3 class="panel-title">Stone</h3>
 			</div>
-			<ul class="list-group media-list">
-				<!-- volist循环 -->
-				<volist name="friends" id="friends" empty="你个穷碧没朋友">
-					<li class="list-group-item media">
-						<a class="pull-left" href="#">
-							<!-- empty判断头像是否为空 -->
-							<empty name=
-						</a>
-					</li>
-			</ul>
+			<div class="list-group">
+				<Stone:friends name="stone_user" uid="2" empty="无数据">
+					<a href="#" class="list-group-item">{$stone_user['username']}</a>
+				</Stone:friends>
+			</div>
 		</div>
-		
-		<include file="public/js"/>
-		
-	</body>
-</html>
+</block>
+
+<block name="header">
+    <div class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+            &times;
+        </button>
+        <strong>SUCCESS</strong>重载header Block
+    </div>
+</block>
